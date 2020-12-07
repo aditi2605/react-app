@@ -3,12 +3,14 @@ import React from 'react';
 import './UserItem.css';
 import Avatar from '../../shared/components/Avatar';
 import {Link} from 'react-router-dom';
+import Card from '../../shared/components/Card';
 
 
 const UserItem = props =>{
    return (
        <li className="user-item">
-           <div className="user-item__content">
+          
+               <Card className="user-item__content">
                <Link to= {`${props.id}/places`}>
               
                <div className="user-item__image">
@@ -19,7 +21,8 @@ const UserItem = props =>{
                      <h3>{props.placeCount} {props.placeCount === 1? 'Place': 'Places'} </h3>
                </div>
                </Link>
-           </div>
+               </Card>
+          
        </li>
    );
 };
